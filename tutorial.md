@@ -2776,7 +2776,7 @@ of a monadic context that need to hold a reference to themselves.
 ```haskell
 {-# LANGUAGE RecursiveDo #-}
 
-justOnes :: [Int]
+justOnes :: Maybe [Integer]
 justOnes = do
   rec xs <- Just (1:xs)
   return (map negate xs)
